@@ -1,0 +1,348 @@
+/* propiedades de reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*color de fondo del body*/
+body{
+    background-color: #F5F4E3;
+}
+
+/*estilos del index del header y navbar ,adicionales a los que vienen con boostrap*/
+.navbar {
+    background-color: #F5F4E3;
+  }
+.navbar-brand {
+    width: 10%;
+    height: 70%;
+}
+.collapse.navbar-collapse {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+
+
+/*estilos de main del index */
+
+main{
+    display: flex;
+    align-items: center;
+    
+}
+main .img-pos-payway{
+    float: right;
+    margin-left: 5px;
+    width: 80%;
+    height: 80%;
+    
+}
+main .texto-uno{
+    text-align: left;
+    float: left;
+    width: 40%;
+}
+main .texto-uno p{
+    font-size: 12px;
+    font-weight: bold;
+    text-shadow: #000;
+
+}
+main .texto-uno h1{
+    margin: 20px 0px;
+    text-decoration-line: underline;
+    color: #0056b3;
+    
+}
+main a{
+    font-size: 10px;
+    background-color: #1BB4A8;
+    text-align: center;
+    text-decoration: white;
+    font-weight: bold;
+    border: 1px solid #ccc; 
+    margin: 10px;
+    padding: 10px;
+}
+main a:hover{
+    color: #fff;
+    background-color: #000;
+}
+/*estilos del main-nosotros*/
+.main-nosotros{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1fr 1.5fr 0.5fr 1.5fr 0.5fr 1.5fr;
+    gap: 1rem;
+    margin: 10px 20px; 
+}
+.main-nosotros img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+/*estilos textos contacto comercial*/
+
+.section-uno {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 0px 10px 0px;
+    padding: 20px;
+    background-image: url(../Images/tarjetamano.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.section-uno .contacto-comercial {
+    text-align: center;
+    padding-right: 10px;
+
+}
+.section-uno .contacto-comercial .texto-central{
+    color: #1BB4A8;
+    font-size: 22px;
+    font-weight: bold;
+    text-shadow: #000;
+    margin-bottom: 40px;
+    text-decoration: underline;
+    
+
+}
+.section-uno .contacto-comercial .texto-operar{
+    display: block;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: white;
+    margin: 30px 0px 30px 0px;
+}
+.section-uno .contacto-comercial h2{
+    display: block;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: white;
+    margin-top: 15px;
+}
+.section-uno .contacto-comercial h2 span{
+    display: block;
+    text-decoration: underline;
+}
+
+/*estilo del formulario de contacto*/
+.form-contacto{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    margin: 10px auto;
+    border: 1px solid whitesmoke;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #1BB4A8;
+}
+.form-contacto label{
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.form-contacto input{
+    width: 100%;
+    padding: 5px;
+    border: 1 px solid #ddd;
+    border-radius: 3px;
+    background-color: #ddd;
+}
+.form-contacto textarea{
+    width: 100%;
+    height: 100px;
+    padding: 5px;
+    background-color: #ddd;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+.enviar {
+    background-color: #1BB4A8;
+    color: white;
+    font-weight: bold;
+    width: 50%;
+    padding: 10px;
+    margin: 0px 0px 5px 0px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+/* Efectos al pasar el mouse por sobre el botón enviar*/
+  
+.enviar:hover {
+    background-color: #0056b3;   
+  }
+
+
+/* estilos formulario trabaja con Nosotros*/
+.section-dos{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0px 10px 0px;
+    padding: 10px;
+    background-image: url(../Images/trabajando.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.section-dos .section-dos-textos{
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: whitesmoke;
+    text-shadow: #000;
+    padding-bottom: 200px;
+    margin-right: 5px;
+}
+.section-dos .section-dos-textos p{
+    text-decoration: underline;
+    margin: 30px 0px 30px;
+}
+.form-trabaja{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    margin: 10px auto;
+    border: 2px solid whitesmoke;
+    padding: 20px;
+    border-radius: 2px;
+    background-color: #AC886A;
+}
+.form-trabaja label{
+    color: white;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.form-trabaja input{
+    width: 100%;
+    padding: 5px;
+    border: 1 px solid #ddd;
+    border-radius: 3px;
+    background-color: #ddd;
+    
+}
+.form-trabaja textarea{
+    width: 100%;
+    height: 100px;
+    padding: 5px;
+    background-color: #ddd;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+.enviar-cv {
+    background-color: #AC886A;
+    color: white;
+    font-weight: bold;
+    width: 50%;
+    padding: 10px;
+    margin: 0px 0px 5px 0px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+/* Efectos al pasar el mouse por sobre el botón enviar*/
+  
+.enviar-cv:hover {
+    background-color: #0056b3;   
+  }
+/*efectos del footer adicionales a los de boostrap*/
+
+footer{
+    background-color: #F5F4E3;
+    
+}
+.logo-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 40px;
+}
+
+/*mq de tables*/
+
+@media screen and (min-width: 600px){
+    .main-nosotros{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+    .main-nosotros h1{
+        grid-column: span 2;
+        text-align: center;
+        text-decoration: underline;
+        text-shadow: #ccc;
+        font-size: 50px;
+        font-style: oblique;
+    }
+    .main-nosotros p{
+        font-size: 12px;
+    }
+    .form-contacto{
+        width: 400px;
+        margin: 10px auto;
+        padding: 20px;   
+    }
+    main .texto-uno p{
+        font-size: 14px;
+       
+    
+    }
+    main .texto-uno h1{
+        font-size: 35px;
+    }
+}
+
+/*mq de desktop*/
+
+@media screen and (min-width: 995px){
+    main .texto-uno p{
+        font-size: 18px;
+    
+    }
+    main .texto-uno h1{
+        font-size: 45px;
+    }
+    main a{
+        font-size: 16px;        
+    } 
+    
+    .section-uno .contacto-comercial .texto-central{
+        font-size: 30px;
+        margin-bottom: 70px;  
+    }
+    .section-uno .contacto-comercial .texto-operar{
+        font-size: 24px;
+        margin: 60px 0px 60px 0px;
+    }
+    .section-uno .contacto-comercial h2{
+        font-size: 24px;
+        margin-top: 25px;
+    }
+      
+    .form-contacto{
+        width: 500px;
+    }
+    .form-trabaja{
+        width: 500px;
+        
+    }
+    .section-dos .section-dos-textos{
+        font-size: 30px;
+        
+    }
+    .main-nosotros p{
+        font-size: 20px;
+    }
+}
+
+
+
