@@ -30,6 +30,8 @@ body{
 main{
     display: flex;
     align-items: center;
+    margin: 10px;
+    
     
 }
 main .img-pos-payway{
@@ -37,6 +39,7 @@ main .img-pos-payway{
     margin-left: 5px;
     width: 80%;
     height: 80%;
+    align-items: center;
     
 }
 main .texto-uno{
@@ -63,8 +66,8 @@ main a{
     text-decoration: white;
     font-weight: bold;
     border: 1px solid #ccc; 
-    margin: 10px;
-    padding: 10px;
+    margin: 8px;
+    padding: 8px;
 }
 main a:hover{
     color: #fff;
@@ -73,8 +76,8 @@ main a:hover{
 /*estilos del main-nosotros*/
 .main-nosotros{
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 1fr 1.5fr 0.5fr 1.5fr 0.5fr 1.5fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 1rem;
     margin: 10px 20px; 
 }
@@ -84,6 +87,30 @@ main a:hover{
     object-fit: cover;
     margin-bottom: 10px;
 }
+.main-nosotros P:nth-child(1){
+    grid-column: 1;
+    grid-row: 2;
+}
+.main-nosotros p:nth-child(2){
+    grid-column: 2;
+    grid-row: 3;
+}
+.main-nosotros p:nth-child(3){
+    grid-column: 1;
+    grid-row: 4;
+}
+.main-nosotros img:nth-child(1){
+    grid-column: 2;
+    grid-row: 2;
+}
+.main-nosotros img:nth-child(2){
+    grid-column: 1;
+    grid-row: 3;
+}
+.main-nosotros img:nth-child(3){
+    grid-column: 2;
+    grid-row: 4;
+    }
 /*estilos textos contacto comercial*/
 
 .section-uno {
@@ -105,7 +132,7 @@ main a:hover{
 }
 .section-uno .contacto-comercial .texto-central{
     color: #1BB4A8;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
     text-shadow: #000;
     margin-bottom: 40px;
@@ -116,7 +143,7 @@ main a:hover{
 .section-uno .contacto-comercial .texto-operar{
     display: block;
     color: black;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     text-shadow: white;
     margin: 30px 0px 30px 0px;
@@ -124,7 +151,7 @@ main a:hover{
 .section-uno .contacto-comercial h2{
     display: block;
     color: black;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     text-shadow: white;
     margin-top: 15px;
@@ -138,7 +165,7 @@ main a:hover{
 .form-contacto{
     display: flex;
     flex-direction: column;
-    width: 250px;
+    width: 200px;
     margin: 10px auto;
     border: 1px solid whitesmoke;
     padding: 20px;
@@ -188,34 +215,51 @@ main a:hover{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 10px 0px 10px 0px;
     padding: 10px;
     background-image: url(../Images/trabajando.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
-.section-dos .section-dos-textos{
-    text-align: center;
+.section-dos .section-dos-textos h3{
+    text-align: left;
     font-size: 14px;
     font-weight: bold;
     color: whitesmoke;
     text-shadow: #000;
-    padding-bottom: 200px;
     margin-right: 5px;
+    margin-bottom: 100px;
+}
+.section-dos .section-dos-textos h4{
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+    color: whitesmoke;
+    text-shadow: #000;
+    margin-right: 5px;
+    margin-top: 100px;
 }
 .section-dos .section-dos-textos p{
     text-decoration: underline;
     margin: 30px 0px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: whitesmoke;
+    text-shadow: #000;
+    margin-right: 5px;
+    margin: auto;
+    text-align: left;
+
 }
 .form-trabaja{
     display: flex;
     flex-direction: column;
-    width: 250px;
+    width: 150px;
     margin: 10px auto;
     border: 2px solid whitesmoke;
     padding: 20px;
     border-radius: 2px;
     background-color: #AC886A;
+    font-size: 10px;
 }
 .form-trabaja label{
     color: white;
@@ -267,6 +311,22 @@ footer{
     margin-top: 40px;
     gap: 40px;
 }
+/*mq de mobile para el main-nosotros*/
+@media screen and (max-width: 400px){
+    .main-nosotros{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, 1fr)
+    }
+    .main-nosotros h1{
+        grid-column: span 2;
+    }
+    .main-nosotros p{
+        grid-column: span 2;
+    }
+    .main-nosotros img{
+        grid-column: span 2;
+    }
+}
 
 /*mq de tables*/
 
@@ -274,6 +334,7 @@ footer{
     .main-nosotros{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
+        
     }
     .main-nosotros h1{
         grid-column: span 2;
@@ -285,19 +346,21 @@ footer{
     }
     .main-nosotros p{
         font-size: 12px;
-    }
+    
+    }   
     .form-contacto{
         width: 400px;
         margin: 10px auto;
         padding: 20px;   
     }
     main .texto-uno p{
-        font-size: 14px;
-       
-    
+        font-size: 14px;    
     }
     main .texto-uno h1{
         font-size: 35px;
+    }
+    .form-trabaja{
+        width: 300px
     }
 }
 
@@ -332,16 +395,24 @@ footer{
         width: 500px;
     }
     .form-trabaja{
-        width: 500px;
+        width: 600px;   
         
     }
     .section-dos .section-dos-textos{
-        font-size: 30px;
+        font-size: 250px;
+        text-align: center;
+        margin-left: 45px;
+        
+    }
+    .main-nosotros{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
         
     }
     .main-nosotros p{
         font-size: 20px;
     }
+
 }
 
 
