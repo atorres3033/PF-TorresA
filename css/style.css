@@ -1,419 +1,695 @@
-/* propiedades de reset*/
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@charset "UTF-8";
+.form-tecnico, .form-motivo-contacto, .form-adhesion, .form-trabaja, .section-uno .form-contacto {
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
 }
-
-/*color de fondo del body*/
-body{
-    background-color: #F5F4E3;
+.form-tecnico label, .form-motivo-contacto label, .form-adhesion label, .form-trabaja label, .section-uno .form-contacto label {
+  font-size: 12px;
+  font-weight: 900;
+  margin-bottom: 5px;
 }
-
-/*estilos del index del header y navbar ,adicionales a los que vienen con boostrap*/
-.navbar {
-    background-color: #F5F4E3;
+@media screen and (min-width: 600px) {
+  .form-tecnico label, .form-motivo-contacto label, .form-adhesion label, .form-trabaja label, .section-uno .form-contacto label {
+    font-size: 18px;
   }
-.navbar-brand {
-    width: 10%;
-    height: 70%;
 }
-.collapse.navbar-collapse {
-    display: flex;
-    justify-content: flex-end;
+.form-tecnico input, .form-motivo-contacto input, .form-adhesion input, .form-trabaja input, .section-uno .form-contacto input {
+  width: 100%;
+  padding: 5px;
+  border: 1 px solid #ddd;
+  border-radius: 3px;
+  background-color: #ddd;
+}
+.form-tecnico textarea, .form-motivo-contacto textarea, .form-adhesion textarea, .form-trabaja textarea, .section-uno .form-contacto textarea {
+  width: 100%;
+  height: 100px;
+  padding: 5px;
+  background-color: #ddd;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.tecnico-enviar, .motivo-enviar, .enviar, .enviar-cv, .section-uno .enviar {
+  font-weight: 900;
+  width: 50%;
+  padding: 10px;
+  margin: 0px 0px 15px 0px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.tecnico-enviar:hover, .motivo-enviar:hover, .enviar:hover, .enviar-cv:hover {
+  background-color: #6196be;
+}
+@media screen and (min-width: 600px) {
+  .tecnico-enviar, .motivo-enviar, .enviar, .enviar-cv, .section-uno .enviar {
+    font-size: 18px;
   }
+}
 
-
-
-/*estilos de main del index */
-
-main{
-    display: flex;
-    align-items: center;
-    margin: 10px;
-    
-    
+.info-nosotros {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+  margin: 10px 20px;
 }
-main .img-pos-payway{
-    float: right;
-    margin-left: 5px;
-    width: 80%;
-    height: 80%;
-    align-items: center;
-    
+.info-nosotros P:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
 }
-main .texto-uno{
-    text-align: left;
-    float: left;
-    width: 40%;
+.info-nosotros p:nth-child(2) {
+  grid-column: 1;
+  grid-row: 3;
 }
-main .texto-uno p{
-    font-size: 12px;
-    font-weight: bold;
-    text-shadow: #000;
-
+.info-nosotros img:nth-child(1) {
+  grid-column: 1;
+  grid-row: 2;
 }
-main .texto-uno h1{
-    margin: 20px 0px;
-    text-decoration-line: underline;
-    color: #0056b3;
-    
+.info-nosotros img:nth-child(2) {
+  grid-column: 1;
+  grid-row: 4;
 }
-main a{
-    font-size: 10px;
-    background-color: #1BB4A8;
-    text-align: center;
-    text-decoration: white;
-    font-weight: bold;
-    border: 1px solid #ccc; 
-    margin: 8px;
-    padding: 8px;
-}
-main a:hover{
-    color: #fff;
-    background-color: #000;
-}
-/*estilos del main-nosotros*/
-.main-nosotros{
-    display: grid;
+@media screen and (min-width: 995px) {
+  .info-nosotros {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 1rem;
-    margin: 10px 20px; 
-}
-.main-nosotros img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    margin-bottom: 10px;
-}
-.main-nosotros P:nth-child(1){
+    grid-template-rows: 1fr 1fr;
+  }
+  .info-nosotros P:nth-child(1) {
     grid-column: 1;
-    grid-row: 2;
-}
-.main-nosotros p:nth-child(2){
-    grid-column: 2;
-    grid-row: 3;
-}
-.main-nosotros p:nth-child(3){
-    grid-column: 1;
-    grid-row: 4;
-}
-.main-nosotros img:nth-child(1){
+    grid-row: 1;
+  }
+  .info-nosotros p:nth-child(2) {
     grid-column: 2;
     grid-row: 2;
-}
-.main-nosotros img:nth-child(2){
-    grid-column: 1;
-    grid-row: 3;
-}
-.main-nosotros img:nth-child(3){
+  }
+  .info-nosotros img:nth-child(1) {
     grid-column: 2;
-    grid-row: 4;
-    }
-/*estilos textos contacto comercial*/
+    grid-row: 1;
+  }
+  .info-nosotros img:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+}
+
+.beneficios {
+  background-color: #6196be;
+  color: black;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  margin: 5px;
+  box-shadow: 1px 1px 1px black;
+  width: 350px;
+}
+@media screen and (min-width: 600px) {
+  .beneficios {
+    width: 800px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F5F4E3;
+}
+
+.navbar {
+  background-color: #F5F4E3;
+}
+@media screen and (min-width: 600px) {
+  .navbar {
+    border-bottom: 2px solid gray;
+  }
+  .navbar .navbar ul {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .navbar .navbar-nav .nav-item .nav-link {
+    color: #ccc;
+  }
+  .navbar .navbar-nav .nav-item {
+    margin: 0 5px;
+  }
+  .navbar .navbar-nav .nav-link {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background-color: #332FAF;
+    transition: background-color 0.3s ease;
+  }
+  .navbar .navbar-nav .nav-link:hover {
+    transform: scale(1.5);
+  }
+}
+.navbar .navbar-brand {
+  width: 10%;
+  height: 70%;
+}
+.navbar .collapse.navbar-collapse {
+  justify-content: flex-end;
+}
+
+.main-index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 50px 20px;
+}
+.main-index h1 {
+  font-family: arial, helvetica, sans-serif;
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #332FAF;
+  text-shadow: #ddd;
+}
+@media screen and (min-width: 600px) {
+  .main-index h1 {
+    font-size: 64px;
+  }
+}
+
+.texto-uno p {
+  font-family: arial, helvetica, sans-serif;
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+@media screen and (min-width: 600px) {
+  .texto-uno p {
+    font-size: 32px;
+  }
+}
+
+#acepte {
+  color: grey;
+  font-size: 24px;
+}
+@media screen and (min-width: 600px) {
+  #acepte {
+    font-size: 40px;
+  }
+}
+
+.img-pos-payway {
+  position: relative;
+}
+.img-pos-payway img {
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+}
+@media screen and (min-width: 600px) {
+  .img-pos-payway img {
+    width: 1300px;
+  }
+}
+
+.boton-circular {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #6196be;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+  left: 20px; /* Alineado a la izquierda de la imagen */
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+.boton-circular:hover {
+  transform: rotateY(180deg);
+}
+.boton-circular .atras {
+  background-color: #6196BE; /* Mismo color de fondo que la cara frontal */
+  color: white;
+  transform: rotateY(180deg);
+}
+.boton-circular .frente, .boton-circular .atras {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%; /* Hace que el botón sea circular en ambas caras */
+}
+@media screen and (min-width: 750px) {
+  .boton-circular .frente, .boton-circular .atras {
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .boton-circular {
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+  }
+}
 
 .section-uno {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0px 0px 10px 0px;
-    padding: 20px;
-    background-image: url(../Images/tarjetamano.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px 0px 10px 0px;
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../Images/tarjetamano.jpg);
 }
-
+.section-uno .form-contacto {
+  width: 200px;
+  background-color: #74c0ba;
+  opacity: 0.8;
+}
+@media screen and (min-width: 600px) {
+  .section-uno .form-contacto {
+    width: 300px;
+  }
+}
 .section-uno .contacto-comercial {
-    text-align: center;
-    padding-right: 10px;
-
+  text-align: center;
+  padding-right: 10px;
+  z-index: 1;
 }
-.section-uno .contacto-comercial .texto-central{
-    color: #1BB4A8;
-    font-size: 20px;
-    font-weight: bold;
-    text-shadow: #000;
-    margin-bottom: 40px;
-    text-decoration: underline;
-    
-
+.section-uno .contacto-comercial .texto-central {
+  color: black;
+  font-size: 20px;
+  font-weight: 900;
+  text-shadow: #000;
+  margin-bottom: 40px;
+  text-decoration: underline;
 }
-.section-uno .contacto-comercial .texto-operar{
-    display: block;
-    color: black;
-    font-size: 14px;
-    font-weight: bold;
-    text-shadow: white;
-    margin: 30px 0px 30px 0px;
-}
-.section-uno .contacto-comercial h2{
-    display: block;
-    color: black;
-    font-size: 14px;
-    font-weight: bold;
-    text-shadow: white;
-    margin-top: 15px;
-}
-.section-uno .contacto-comercial h2 span{
-    display: block;
-    text-decoration: underline;
-}
-
-/*estilo del formulario de contacto*/
-.form-contacto{
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-    margin: 10px auto;
-    border: 1px solid whitesmoke;
-    padding: 20px;
-    border-radius: 5px;
-    background-color: #1BB4A8;
-}
-.form-contacto label{
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-.form-contacto input{
-    width: 100%;
-    padding: 5px;
-    border: 1 px solid #ddd;
-    border-radius: 3px;
-    background-color: #ddd;
-}
-.form-contacto textarea{
-    width: 100%;
-    height: 100px;
-    padding: 5px;
-    background-color: #ddd;
-    border: 1px solid #ddd;
-    border-radius: 3px;
-}
-.enviar {
-    background-color: #1BB4A8;
-    color: white;
-    font-weight: bold;
-    width: 50%;
-    padding: 10px;
-    margin: 0px 0px 5px 0px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+@media screen and (min-width: 600px) {
+  .section-uno .contacto-comercial .texto-central {
+    font-size: 30px;
+    margin-bottom: 70px;
   }
-  
-/* Efectos al pasar el mouse por sobre el botón enviar*/
-  
-.enviar:hover {
-    background-color: #0056b3;   
+}
+.section-uno .contacto-comercial .texto-operar {
+  display: block;
+  color: black;
+  font-size: 14px;
+  font-weight: 900;
+  text-shadow: #ccc;
+  margin: 30px 0px 30px 0px;
+}
+@media screen and (min-width: 600px) {
+  .section-uno .contacto-comercial .texto-operar {
+    font-size: 24px;
+    margin-bottom: 60px 0px 60px 0px;
   }
+}
+.section-uno .contacto-comercial h2 {
+  display: block;
+  color: #1bb4a8;
+  font-size: 16px;
+  font-weight: 900;
+  text-shadow: #ccc;
+  margin-top: 15px;
+}
+@media screen and (min-width: 600px) {
+  .section-uno .contacto-comercial h2 {
+    font-size: 24px;
+    margin-top: 25px;
+  }
+}
+.section-uno .contacto-comercial h2 span {
+  display: block;
+  text-decoration: underline;
+}
+.section-uno .enviar {
+  background-color: #74c0ba;
+}
 
+.main-nosotros .slogan h1 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 32px;
+  color: #332FAF;
+  text-align: center;
+  font-weight: 900;
+}
+@media screen and (min-width: 600px) {
+  .main-nosotros .slogan h1 {
+    margin-top: 10px;
+    font-size: 46px;
+  }
+}
+@media screen and (min-width: 995px) {
+  .main-nosotros .slogan h1 {
+    margin-top: 20px;
+    font-size: 80px;
+  }
+}
 
-/* estilos formulario trabaja con Nosotros*/
-.section-dos{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    background-image: url(../Images/trabajando.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+.slogan h2 {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  height: 100px;
+  background-image: url(../Images/fondo-nosotros.jpg);
 }
-.section-dos .section-dos-textos h3{
-    text-align: left;
-    font-size: 14px;
-    font-weight: bold;
-    color: whitesmoke;
-    text-shadow: #000;
-    margin-right: 5px;
-    margin-bottom: 100px;
-}
-.section-dos .section-dos-textos h4{
-    text-align: left;
-    font-size: 14px;
-    font-weight: bold;
-    color: whitesmoke;
-    text-shadow: #000;
-    margin-right: 5px;
-    margin-top: 100px;
-}
-.section-dos .section-dos-textos p{
-    text-decoration: underline;
-    margin: 30px 0px 30px;
-    font-size: 16px;
-    font-weight: bold;
-    color: whitesmoke;
-    text-shadow: #000;
-    margin-right: 5px;
-    margin: auto;
-    text-align: left;
 
+@media screen and (min-width: 600px) {
+  .info-nosotros {
+    font-size: 24px;
+    margin-top: 50px;
+  }
 }
-.form-trabaja{
-    display: flex;
-    flex-direction: column;
-    width: 150px;
-    margin: 10px auto;
-    border: 2px solid whitesmoke;
-    padding: 20px;
-    border-radius: 2px;
-    background-color: #AC886A;
-    font-size: 10px;
+.info-nosotros img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-bottom: 10px;
 }
-.form-trabaja label{
-    color: white;
-    font-weight: bold;
-    margin-bottom: 5px;
+
+.trabaja-nosotros .trabaja-nosotros-textos h3 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 24px;
+  font-weight: 600;
+  color: black;
+  text-shadow: #000;
+  margin-top: 30px;
+  text-align: center;
 }
-.form-trabaja input{
-    width: 100%;
-    padding: 5px;
-    border: 1 px solid #ddd;
-    border-radius: 3px;
-    background-color: #ddd;
-    
+@media screen and (min-width: 600px) {
+  .trabaja-nosotros .trabaja-nosotros-textos h3 {
+    font-size: 54px;
+  }
 }
-.form-trabaja textarea{
-    width: 100%;
-    height: 100px;
-    padding: 5px;
-    background-color: #ddd;
-    border: 1px solid #ddd;
-    border-radius: 3px;
+.trabaja-nosotros .trabaja-nosotros-textos p {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 24px;
+  font-weight: 600;
+  color: black;
+  text-shadow: #000;
+  margin-top: 30px;
+  text-align: center;
 }
+@media screen and (min-width: 600px) {
+  .trabaja-nosotros .trabaja-nosotros-textos p {
+    font-size: 46px;
+  }
+}
+.trabaja-nosotros .icon-cv {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.section-form-trabaja {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px 0px 10px 0px;
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../Images/trabajando.jpg);
+}
+
+.form-trabaja {
+  width: 200px;
+  background-color: #ac886a;
+  opacity: 0.9;
+}
+@media screen and (min-width: 995px) {
+  .form-trabaja {
+    width: 450px;
+  }
+}
+
 .enviar-cv {
-    background-color: #AC886A;
-    color: white;
-    font-weight: bold;
-    width: 50%;
-    padding: 10px;
-    margin: 0px 0px 5px 0px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  background-color: #ac886a;
+}
+
+.main-solicitarpos {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main-solicitarpos h1 {
+  font-family: "Courier New", Courier, monospace;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: whitesmoke;
+  font-size: 16px;
+  margin: 20px 0 0 15px;
+  padding: 5px;
+  border: 1px solid #6196be;
+  background-color: #6196be;
+}
+@media screen and (min-width: 600px) {
+  .main-solicitarpos h1 {
+    font-size: 32px;
   }
-  
-/* Efectos al pasar el mouse por sobre el botón enviar*/
-  
-.enviar-cv:hover {
-    background-color: #0056b3;   
+}
+.main-solicitarpos h4 {
+  font-weight: 100px;
+  font-size: 30px;
+  margin: 70px 0px 30px 0px;
+  font-style: italic;
+  text-shadow: #000;
+}
+.main-solicitarpos .texto-solicitarpos {
+  background-image: url(../Images/venta.jpg);
+  background-repeat: no-repeat;
+  margin-top: 10px;
+  width: 350px;
+  height: 450px;
+  opacity: 0.8;
+  position: relative;
+}
+@media screen and (min-width: 600px) {
+  .main-solicitarpos .texto-solicitarpos {
+    margin: 10px 0 0 20px;
+    width: 800px;
+    opacity: 0.9;
+    position: static;
   }
-/*efectos del footer adicionales a los de boostrap*/
-
-footer{
-    background-color: #F5F4E3;
-    
 }
-.logo-container{
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-    gap: 40px;
+.main-solicitarpos .texto-solicitarpos .solucion {
+  display: block;
+  text-align: left;
+  color: #f0f0f0;
+  font-size: 22px;
+  font-family: "Courier New", Courier, monospace;
+  margin: 40px 0 0 15px;
+  font-weight: bold;
+  text-shadow: #000;
 }
-/*mq de mobile para el main-nosotros*/
-@media screen and (max-width: 400px){
-    .main-nosotros{
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(7, 1fr)
-    }
-    .main-nosotros h1{
-        grid-column: span 2;
-    }
-    .main-nosotros p{
-        grid-column: span 2;
-    }
-    .main-nosotros img{
-        grid-column: span 2;
-    }
+@media screen and (min-width: 600px) {
+  .main-solicitarpos .texto-solicitarpos .solucion {
+    font-size: 32px;
+  }
+}
+.main-solicitarpos .texto-solicitarpos .solucion span {
+  display: block;
 }
 
-/*mq de tables*/
-
-@media screen and (min-width: 600px){
-    .main-nosotros{
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        
-    }
-    .main-nosotros h1{
-        grid-column: span 2;
-        text-align: center;
-        text-decoration: underline;
-        text-shadow: #ccc;
-        font-size: 50px;
-        font-style: oblique;
-    }
-    .main-nosotros p{
-        font-size: 12px;
-    
-    }   
-    .form-contacto{
-        width: 400px;
-        margin: 10px auto;
-        padding: 20px;   
-    }
-    main .texto-uno p{
-        font-size: 14px;    
-    }
-    main .texto-uno h1{
-        font-size: 35px;
-    }
-    .form-trabaja{
-        width: 300px
-    }
+.beneficios {
+  flex: 1;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  width: 350px;
+}
+.beneficios:hover {
+  transform: scale(1.1);
+}
+@media screen and (min-width: 600px) {
+  .beneficios {
+    font-size: 18px;
+    width: 800px;
+    transition: transform 0.3s ease;
+  }
+  .beneficios:hover {
+    transform: scale(1.1);
+  }
 }
 
-/*mq de desktop*/
-
-@media screen and (min-width: 995px){
-    main .texto-uno p{
-        font-size: 18px;
-    
-    }
-    main .texto-uno h1{
-        font-size: 45px;
-    }
-    main a{
-        font-size: 16px;        
-    } 
-    
-    .section-uno .contacto-comercial .texto-central{
-        font-size: 30px;
-        margin-bottom: 70px;  
-    }
-    .section-uno .contacto-comercial .texto-operar{
-        font-size: 24px;
-        margin: 60px 0px 60px 0px;
-    }
-    .section-uno .contacto-comercial h2{
-        font-size: 24px;
-        margin-top: 25px;
-    }
-      
-    .form-contacto{
-        width: 500px;
-    }
-    .form-trabaja{
-        width: 600px;   
-        
-    }
-    .section-dos .section-dos-textos{
-        font-size: 250px;
-        text-align: center;
-        margin-left: 45px;
-        
-    }
-    .main-nosotros{
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        
-    }
-    .main-nosotros p{
-        font-size: 20px;
-    }
-
+.form-adhesion {
+  width: 300px;
+  background-color: #6196be;
+}
+@media screen and (min-width: 600px) {
+  .form-adhesion {
+    width: 800px;
+  }
 }
 
+.enviar {
+  background-color: #6196be;
+}
 
+.servicio-tecnico {
+  color: black;
+  display: block;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  justify-content: center;
+  padding: 5px;
+  margin: 5px;
+}
+@media screen and (min-width: 600px) {
+  .servicio-tecnico {
+    text-align: center;
+    margin-top: 15px;
+  }
+}
+.servicio-tecnico h1 {
+  font-size: 32px;
+}
+@media screen and (min-width: 600px) {
+  .servicio-tecnico h1 {
+    font-size: 64px;
+  }
+}
+.servicio-tecnico p {
+  font-size: 18px;
+  font-style: italic;
+}
+.servicio-tecnico span {
+  display: block;
+  text-decoration: underline;
+  margin-top: 20px;
+}
 
+.form-motivo-contacto {
+  width: 320px;
+  background-color: #6196be;
+}
+@media screen and (min-width: 600px) {
+  .form-motivo-contacto {
+    width: 600px;
+    margin-left: 40px;
+  }
+}
+
+.motivo-enviar {
+  width: 100px;
+  background-color: #6196be;
+  margin-left: 20px;
+}
+@media screen and (min-width: 600px) {
+  .motivo-enviar {
+    width: 600px;
+    margin-left: 40px;
+  }
+}
+
+.form-tecnico {
+  width: 320px;
+  background-color: #6196be;
+}
+@media screen and (min-width: 600px) {
+  .form-tecnico {
+    width: 600px;
+    margin-left: 40px;
+  }
+}
+
+.tecnico-enviar {
+  width: 100px;
+  background-color: #6196be;
+  margin-left: 20px;
+}
+@media screen and (min-width: 600px) {
+  .tecnico-enviar {
+    width: 600px;
+    margin-left: 40px;
+  }
+}
+
+.main-descargas .descargas {
+  margin: 10px;
+  padding: 20px;
+  background-color: #6196be;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: arial, helvetica, sans-serif;
+}
+.main-descargas .descargas h1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.main-descargas .descargas .descripcion {
+  font-size: 24px;
+  text-decoration: wavy;
+  text-decoration: underline;
+  margin-bottom: 5px;
+}
+.main-descargas .descargas #informacion {
+  font-size: 20px;
+  font-style: italic;
+}
+
+.botones-descargas {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+@media screen and (min-width: 600px) {
+  .botones-descargas {
+    font-size: 24px;
+    transform: scale(1, 1);
+  }
+}
+
+.boton-terminal {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #ccc;
+  text-decoration: none;
+  border-radius: 50px;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 600px) {
+  .boton-terminal {
+    font-size: 18px;
+  }
+  .boton-terminal:hover {
+    transform: scale(1.5);
+  }
+}
+.boton-terminal:hover {
+  background-color: #0056b3;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 40px;
+}
+
+/*# sourceMappingURL=style.css.map */

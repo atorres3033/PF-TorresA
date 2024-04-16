@@ -1,0 +1,146 @@
+@mixin medidas ($width, $heigth){
+    width: $width;
+    height: $heigth;
+}
+
+@mixin flex-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+@mixin flex-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@mixin flex-3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-4{
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+@mixin fondo-form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 0px 10px 0px;
+    padding: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@mixin textos-nosotros{
+    font-family: $font-itc;
+    font-size: 24px;
+    font-weight: 600;
+    color: $color-textos-1;
+    text-shadow: $color-text-shadow-2;
+    margin-top: 30px;
+    text-align: center;
+}
+@mixin textos-adhierase{
+    font-family: $font-itc;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: $color-textos-2;
+    font-size: 16px;
+    @media screen and (min-width:600px) {
+        font-size: 32px;
+    }
+    margin: 20px 0 0 15px;
+    padding: 5px;
+    border: 1px solid $color-formulario-1;
+    background-color: $color-formulario-1;
+}
+@mixin textos-solucion{
+    display: block;
+    text-align: left;
+    color: $color-bg-navlink;
+    font-size: 22px;
+    font-family: $font-itc;
+    margin: 40px 0 0 15px;
+    font-weight:bold;
+    text-shadow: $color-text-shadow-2;
+    @media screen and (min-width: 600px){
+        font-size: 32px;
+    }
+}
+@mixin beneficios-p{
+    flex: 1;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 700;
+    width: 350px;
+    &:hover{
+        transform: scale(1.1);
+    }
+    @media screen and (min-width: 600px){
+        font-size: 18px;
+        width: 800px;
+        transition: transform 0.3s ease;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+}
+    
+@mixin textos-formadhesion{
+    font-weight: 100px;
+    font-size: 30px;
+    margin: 70px 0px 30px 0px;
+    font-style: italic;
+    text-shadow: #000;
+}
+@mixin textos-servicio-tecnico{
+    color: $color-textos-1;    
+    display: block;
+    font-family: $font-servicio-tecnico;
+    justify-content: center;
+    padding: 5px;
+    margin: 5px;
+}
+@mixin main-descargas{
+    margin: 10px;
+    padding: 20px;
+    background-color: $color-formulario-1;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: $font-principal;
+}
+@mixin btn-descargas{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    @media screen and (min-width: 600px){
+        font-size: 24px;
+        transform: scale(1,1);
+    }
+}
+@mixin btn-terminal{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: $color-boton-terminal;
+    color: $color-text-shadow-1;
+    text-decoration: none;
+    border-radius: 50px;
+    margin-bottom: 10px;
+    @media screen and (min-width: 600px){
+        font-size: 18px;
+        &:hover{
+            transform: scale(1.5);
+        }
+    }
+}
