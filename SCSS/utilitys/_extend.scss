@@ -1,97 +1,69 @@
+%scroll{
+  position: fixed;
+  top: 0;
+  background-color: white; /* Color de fondo cuando se hace scroll */
+  box-shadow: 0 0px 4px rgba(0, 0, 0, 0.1); /* Sombra cuando se hace scroll */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
 
 %formulario{
     display: flex;
     flex-direction: column;
-    margin: 10px auto;
-    border: 1px solid $color-border;
-    padding: 20px;
-    border-radius: 5px;
-
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px auto;
+    border: none;
+       
     label{
         font-size: 12px;
         font-weight: 900;
-        margin-bottom: 5px;
-        @media screen and (min-width:600px) {
-            font-size: 18px;
+        margin-top: 15px;
         }   
-    }
+    
     input{
         width: 100%;
-        padding: 5px;
-        border: 1 px solid $color-border;
-        border-radius: 3px;
-        background-color: $color-border;
+        height: 15px;
+        border: 1px solid black;
+        background-color: white;
     }
     textarea{
         width: 100%;
-        height: 100px;
-        padding: 5px;
-        background-color: $color-border;
-        border: 1px solid $color-border;
-        border-radius: 3px;
+        height: 70px;
+        background-color: white;
+        border: 1px solid black;
+        
     }
 }
 
 %enviar{
     font-weight: 900;
-    width: 50%;
+    width: 100%;
     padding: 10px;
-    margin: 0px 0px 15px 0px;
+    margin: 50px 0px 15px 0px;
     border: none;
-    border-radius: 5px;
+    border-radius: 35px;
     cursor: pointer;
     &:hover{
-        background-color: $color-formulario-1;    
-    }
-    @media screen and (min-width:600px) {
-        font-size: 18px;
+        background-color: $color-acepte;    
     }
 }
 
-%grid-nosotros-sm{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 1rem;
-    margin: 10px 20px;
-    P:nth-child(1){
-        grid-column: 1;
-        grid-row: 1;
-    }
-    p:nth-child(2){
-        grid-column: 1;
-        grid-row: 3;
-      }
-    img:nth-child(1){
-        grid-column: 1;
-        grid-row: 2;
-      }
-    img:nth-child(2){
-        grid-column: 1;
-        grid-row: 4;
-      }
-    @media screen and (min-width:995px) {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        P:nth-child(1){
-            grid-column: 1;
-            grid-row: 1;
-        }
-        p:nth-child(2){
-            grid-column: 2;
-            grid-row: 2;
-          }
-        img:nth-child(1){
-            grid-column: 2;
-            grid-row: 1;
-          }
-        img:nth-child(2){
-            grid-column: 1;
-            grid-row: 2;
-          }
-      }
+%bg-img{
+  background: url(../Images/oficina2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  padding-top: 50px
 }
-
+%bg-img1{
+  background: url(../Images/banner-sitio-03.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  padding-top: 50px
+}
 %container-beneficios{
     background-color: $color-formulario-1;
     color: $color-textos-1;    
@@ -105,4 +77,40 @@
         width: 800px;
     }
 }
+%btn{
+  display: inline-block;
+  font-size: 15px;
+  padding: 15px 50px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: 30px;
+  background: #45BCE9;
+  border: 1px solid #45BCE9;
+  color: #fff;
+  :hover{
+    background: #fff;
+    border: 1px solid #45BCE9;
+    color: #45BCE9;
+  }
+}
+%form{
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.7rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #000;
+  background-color: #F2F3F6;
+  background-clip: padding-box;
+  border: 1px solid #F2F3F6;
+  border-radius: 0.25rem;
+  .form-group{
+    margin-bottom: 1rem;
+  }
+  .label{
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+  }
 

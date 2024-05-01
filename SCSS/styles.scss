@@ -3,6 +3,7 @@
 @import "../SCSS/utilitys/mixin";
 @import "../SCSS/utilitys/variables";
 @import "../SCSS/utilitys/extend";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 //propiedades de reset
 
@@ -15,300 +16,186 @@
 //color de fondo del body//
 
 body{
-    background-color: $color-body;
+    background-color: $color-body1;
 }
 
-//estilos navbar adicionales a boostrap//
+//estilos navbar adicionales a boostrap
 
+//
+a{
+  text-decoration: none;
+}
 .navbar {
-    background-color: $color-body;
-    @media screen and (min-width: 600px){
-      border-bottom: 2px solid gray;
-      .navbar ul{
-        font-size: 18px;
-        font-weight: 600;        
-        }
-        .navbar-nav .nav-item .nav-link{
-        color: #ccc;
-        }
-        .navbar-nav .nav-item{
-        margin: 0 5px;
-        }
-        .navbar-nav .nav-link{
-        padding: 10px 15px;
-        border: 1px solid #ccc;
-        border-radius: 15px;
-        background-color: #332FAF;
-        transition: background-color 0.3s ease;
-        &:hover{
-          transform: scale(1.5);
-      }
-        }
-    }
-    .navbar-brand {
-        width: 10%;
-        height: 70%;
-    }
+    @extend %scroll;
+    z-index: 2;
+    background-color: $color-logo;
+    padding: 5px;
+    width: 94%;
+   
     
-    .collapse.navbar-collapse {
-        justify-content: flex-end;
-      }    
+    h1{
+      font-family:'Times New Roman', Times, serif;
+      font-weight: bolder;
+      color: $color-body1;
+      text-decoration: none;
+      }
+    }
+@media screen and (min-width: 767px) {
+    .nav-item{  
+      font-size: 20px;
+    }
+  }
+button{
+  border-color: $color-body1;
+  } 
+    
+.navbar-brand {
+    width: 20%;
+    height: 20%;
+    }
+
+.collapse.navbar-collapse {
+    justify-content: flex-end;
+    }
+.navbar-nav .nav-item .nav-link{
+    color: #ccc;
+    }
+.navbar-nav .nav-item{
+    margin: 0 5px;
+    }
+.logo-navbar{
+  @media screen and (min-width: 995px){
+    width: 50px;
+    height: 50px;
+  }
+    
 }
+
 
 //estilos del main-index//
 
 .main-index{
-    @include flex-1;
-    padding: 50px 20px;
-    h1{
-      font-family: $font-principal;
-      font-size: 40px;
-      margin-bottom: 20px;
-      color: $color-logo;
-      text-shadow: $color-border;
-    }
-    h1{
-      @media screen and (min-width: 600px){
-        font-size: 64px;
-      }  
-     }
+  @extend %bg-img1;}
+.texto-venda h2{
+  font-family: 'Roboto', sans-serif;
+  font-size: 42px;
+  color: $color-body;
+  margin: 35px 0px 0px 10px;
+  text-align: center;
+  font-weight: 900;
+  @media screen and (min-width: 570px){
+    margin-top: 70px;
+    font-size: 66px;
   }
-
-  .texto-uno p{
-      font-family: $font-principal;
-      font-size: 20px;
-      margin-bottom: 20px;
-      font-style: italic;
-      @media screen and (min-width: 600px){
-        font-size: 32px;
-      }
-    }
-  #acepte{
-        color: grey;
-        font-size: 24px;
-        @media screen and (min-width: 600px){
-          font-size: 40px;
-    }
-  }
-  .img-pos-payway {
-        position: relative;
-      
-    img {
-        max-width: 100%;
-        height: auto;
-        margin: auto;
-        @media screen and (min-width: 600px){
-          width: 1300px
-      }
-    }
-  }
-  .boton-circular {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        background-color: $color-formulario-1; 
-        color: $color-textos-2;
-        @include flex-2;
-        cursor: pointer;
-        position: absolute;
-        bottom: 20px;
-        left: 20px; /* Alineado a la izquierda de la imagen */
-        perspective: 1000px;
-        transform-style: preserve-3d;
-        transition: transform 0.6s;
-    
-      &:hover {
-        transform: rotateY(180deg);
-      }
-     
-      .atras{
-        background-color: #6196BE; /* Mismo color de fondo que la cara frontal */
-        color: white;
-        transform: rotateY(180deg);
-        }
-      .frente, .atras {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        backface-visibility: hidden;
-        @include flex-3;
-        border-radius: 50%; /* Hace que el botón sea circular en ambas caras */ 
-        @media screen and (min-width: 750px){
-          font-size: 32px;
-        }
-      }
-    }
-    .boton-circular{
-      @media screen and (min-width: 600px){
-        width: 200px; 
-        height: 200px;
-        transform-style: preserve-3d;
-        transition: transform 0.6s;
-        }       
-      }   
-
-
-
-// estilo del textos y formulario contacto comercial
-
-.section-uno{
-  @include fondo-form;
-  background-image: url(../Images/tarjetamano.jpg);
-
-
-  .form-contacto{
-    @extend %formulario;
-    width: 200px;
-    background-color: $color-formulario-2;
-    opacity: 0.8;
-    @media screen and (min-width: 600px){
-      width: 300px;
-    }
-  }
-  .contacto-comercial{
-    text-align: center;
-    padding-right: 10px;
-    z-index: 1;
-    .texto-central{
-      color: $color-textos-1;
-      font-size: 20px;
-      font-weight: 900;
-      text-shadow: $color-text-shadow-2;
-      margin-bottom: 40px;
-      text-decoration: underline;
-      @media screen and (min-width: 600px){
-        font-size: 30px;
-        margin-bottom: 70px;
-      }
-    }
-    .texto-operar{
-      display: block;
-      color: $color-textos-1;
-      font-size: 14px;
-      font-weight: 900;
-      text-shadow: $color-text-shadow-1;
-      margin: 30px 0px 30px 0px;
-      @media screen and (min-width: 600px){
-        font-size: 24px;
-        margin-bottom: 60px 0px 60px 0px;
-      }
-    }
-    h2{
-      display: block;
-      color: $color-texto-contacto-comercial;
-      font-size: 16px;
-      font-weight: 900;
-      text-shadow: $color-text-shadow-1;
-      margin-top: 15px;
-      @media screen and (min-width: 600px){
-        font-size: 24px;
-        margin-top: 25px;
-      }
-      span{
-        display: block;
-        text-decoration: underline;
-      }
-    }
-  }
-  .enviar{
-    @extend %enviar;
-    background-color: $color-formulario-2;
+  @media screen and (min-width: 995px){
+    margin-top: 20px;
+    font-size: 76px;
   }
 }
-
+  .texto-venda p{
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  color: $color-body;
+  margin: 15px 0px 0px 10px;
+  text-align: center;
+  font-weight: 900;
+  @media screen and (min-width: 570px){
+    margin-top: 70px;
+    font-size: 46px;
+  }
+  @media screen and (min-width: 995px){
+    margin-top: 18px;
+    font-size: 28px;
+    color: $color-body;
+  }
+  }
+  .imagen-payway{
+    z-index: 1;
+    align-items: center;
+    margin: 30px;
+    @media screen and (min-width: 570px){
+      margin-left: 80px;
+    }
+    @media screen and (min-width: 995px){
+      width: 45%;
+      height: 45%;
+      margin-left: 280px;
+    }
+  }
+  .boton-solicitalo{
+      @include btn-solicitalo;
+      margin: 70px 0px 0px 100px;
+      @media screen and (min-width: 767px){
+        font-size: 32px;
+      }
+      @media screen and (min-width: 995px){
+        margin: 70px 0px 0px 700px;
+      }
+  }
 
 //estilos del main-nosotros
 
+.main-nosotros{
+  @extend %bg-img;
+}
 .main-nosotros .slogan h1{
   font-family: $font-itc;
-  font-size: 32px;
-  color: $color-logo;
-  text-align: center;
+  font-size: 34px;
+  color: black;
+  margin: 25px 0px 0px 10px;
+  text-align: left;
   font-weight: 900;
-  @media screen and (min-width: 600px){
-    margin-top: 10px;
+  @media screen and (min-width: 570px){
+    margin-top: 70px;
     font-size: 46px;
   }
   @media screen and (min-width: 995px){
     margin-top: 20px;
-    font-size: 80px;
+    font-size: 56px;
   }    
 }
 
 .slogan h2{
-    @include flex-4;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    height: 100px;
-    background-image: url(../Images/fondo-nosotros.jpg);
-  }
+    font-family: $font-itc;
+    text-align: center;
+    color: black;
+    font-size: 25px;
+    margin-top: 10px;
+    @media screen and (min-width: 570px){
+      font-size: 34px;
+      margin-top: 30px;
+    }
+    @media screen and (min-width: 995px){
+      font-size: 46px;
+    }
+    }
 
+.info-nosotros p{
+  font-family: $font-principal;
+  color: black;
+  font-size: 14px;
 
-.info-nosotros{
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 570px) {
     font-size: 24px;
     margin-top: 50px;
   }
-  @extend %grid-nosotros-sm;
-  
-  img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    margin-bottom: 10px;
+}
+.btn{
+  @extend %btn;
+  @media screen and (min-width: 570px){
+    font-size: 90px;
   }
 }
-
-//estilos textos y formulario trabaja con Nosotros
-
-.trabaja-nosotros{
-  .trabaja-nosotros-textos{
-    h3{
-      @media screen and (min-width:600px) {
-        font-size: 54px;
-      }
-      @include textos-nosotros; 
-    }
-    p{
-      @media screen and (min-width:600px) {
-        font-size: 46px;
-      }
-      @include textos-nosotros;
-    }
-  }
-  .icon-cv{
-    text-align: center;
-    margin-bottom: 10px;
-  }
-}
-.section-form-trabaja{
-  @include fondo-form;
-  background-image: url(../Images/trabajando.jpg);
-}
-.form-trabaja{
-  @extend %formulario;
-  width: 200px;
-  background-color: $color-formulario-3;
-  opacity: 0.9;
-  @media screen and (min-width:995px){
-    width: 450px
-  }
-}
-.enviar-cv{
-  @extend %enviar;
-  background-color: $color-formulario-3
-}
-
 //estilos de los textos del main Solicitar POS
 
 .main-solicitarpos{
+  margin-top: 55px;
   @include flex-4;
   flex-direction: column;
   h1{
     @include textos-adhierase;
   }
-  h4{
-    @include textos-formadhesion;
-  }
+  
   .texto-solicitarpos{ 
     background-image: url(../Images/venta.jpg);
     background-repeat: no-repeat;
@@ -317,7 +204,7 @@ body{
     height: 450px;
     opacity: 0.8;
     position: relative;
-    @media screen and (min-width: 600px){
+    @media screen and (min-width: 570px){
       margin: 10px 0 0 20px;
       width: 800px;
       opacity: 0.9;
@@ -331,38 +218,31 @@ body{
     }
   } 
 }
-  .beneficios{
-  @extend %container-beneficios;
-  @include beneficios-p;
-  }
-
 
 // formulario adhesion
-
-.form-adhesion{
-  width: 300px;
-  @extend %formulario;
-  background-color: $color-formulario-1;
-  @media screen and (min-width: 600px){
-    width: 800px;
-  }
+#contact h2{
+  margin-top: 10px;
+  font-family: $font-secundaria;
+  font-size: 25px;
 }
-.enviar{  
-  @extend %enviar;
-  background-color: $color-formulario-1;
+#contact form{
+  @extend %form;
+  @media screen and (min-width: 570px){
+    width: 500px;
+  }
 }
 
 //main servicio tecnico
 
 .servicio-tecnico{
-  @media screen and (min-width: 600px){
+  @media screen and (min-width: 570px){
     text-align: center;
     margin-top: 15px;
   }
   @include textos-servicio-tecnico;
   h1{
     font-size: 32px;
-    @media screen and (min-width: 600px){
+    @media screen and (min-width: 570px){
       font-size: 64px;
     }
   }
@@ -383,7 +263,7 @@ body{
   @extend %formulario;
   width: 320px;
   background-color: $color-formulario-1;
-  @media screen and (min-width: 600px){
+  @media screen and (min-width: 570px){
     width:600px;
     margin-left: 40px;
   }
@@ -393,7 +273,7 @@ body{
   width: 100px;
   background-color: $color-formulario-1;
   margin-left: 20px;
-  @media screen and (min-width: 600px){
+  @media screen and (min-width: 570px){
     width:600px;
     margin-left: 40px;
 } 
@@ -403,7 +283,7 @@ body{
   @extend %formulario;
   width: 320px;
   background-color: $color-formulario-1;
-  @media screen and (min-width: 600px){
+  @media screen and (min-width: 570px){
     width:600px;
     margin-left: 40px;
   }
@@ -413,7 +293,7 @@ body{
   width: 100px;
   background-color: $color-formulario-1;
   margin-left: 20px;
-  @media screen and (min-width: 600px){
+  @media screen and (min-width: 570px){
     width:600px;
     margin-left: 40px;
   }
@@ -457,7 +337,119 @@ body{
   margin-top: 40px;
   gap: 40px;
 }
+//estilos adicionales al footer
+
+.logo-container{
+  align-items: center;
+}
+.text-uppercase{
+  font-size: 16px;
+  @media screen and (min-width: 767px) {
+    font-size: 20px;
+  }
+}
+footer p {
+  font-size: 14px;
+  @media screen and (min-width: 767px) {
+    font-size: 16px;}
+  }
+footer .imagen-itc{
+  @media screen and (min-width: 767px){
+    width: 60%;
+    height: 60%;
+  }
+  @media screen and (min-width: 576px){
+    width: 110;
+    height: 110;
+  }
+}
+
+//estilos prueba
+
+/* Header */
+#mainheader {
+  background: url(../Images/oficina2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  padding-top: 50px;
+}
+#showcase{
+  margin-top: 30px;
+}
+h1{ 
+  font-size: 2.5rem;
+  font-weight: bolder;  
+}
+h2 { 
+  font-size: 2rem; 
+  font-weight: 300;
+}
+
+p {
+  font-size: 0.5rem;
+  margin: 10px 0;
+  line-height: 1.7em;
+}
+
+
+.container {
+    margin: auto;
+    max-width: 1300px;
+    overflow: auto;
+    padding: 0 20px;
+  }
   
+.large { font-size: 1.25rem; }
+  
+.btn {
+  display: inline-block;
+  font-size: 15px;
+  padding: 15px 50px;
+  margin: 30px 30px 0px 30px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: 30px;
+  }
+  
+.btn-light {
+  background: #45BCE9;
+  border: 1px solid #45BCE9;
+  color: #fff;
+}
+  
+.btn-light:hover {
+  background: #fff;
+  border: 1px solid #45BCE9;
+  color: #45BCE9;
+  }
+    
+  #showcase h1 {
+    padding-left: 300px;
+  }
+  
+  #showcase h1 span {
+    font-weight: 300;
+  }
+  
+  #showcase p {
+    padding-left: 300px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  #showcase .btn {
+    text-transform: uppercase;
+  }
+
+
+
+
+
+
+
 
  
 

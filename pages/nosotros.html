@@ -13,30 +13,17 @@
   <div class="container">
     <!--El header que contiene el navbar donde se visualiza el logo corporativo y esta el menu hamburguesa con acceso al resto de las opciones de visita de la pagina. Contiene estilos agregados con Boostrap-->
     <header>
-      <nav class="navbar navbar-expand-sm">
+      <nav class="navbar navbar-expand-md" id="navbar">
         <div class="container-fluid"> 
-          <img class="navbar-brand" src="../Images/logo-itc.png" alt="Logo ITC">
-          <button class="navbar-toggler float-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          
+          <a href="../index.html"><h1>I.T.C</h1></a>
+          <button class="navbar-toggler float-end bg-light" type="button" data-bs-toggle="collapse"data-bs-target="#navbarSupportedContent"   aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span></button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav dropdown-menu-end mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../pages/nosotros.html">Nosotros</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../pages/solicitarpos.html">Solicitar POS</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../pages/serviciotecnico.html">Servicio Técnico</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../pages/descargas.html">Descargas</a>
-              </li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="../pages/nosotros.html">Nosotros</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="../pages/solicitarpos.html">Solicitar POS</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="../pages/serviciotecnico.html">Servicio Técnico</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="../pages/descargas.html">Descargas</a></li>
             </ul>
           </div>
         </div>
@@ -45,105 +32,51 @@
     <!--Seccion principal donde se visualiza toda la informacion referente a la Empresa-->
     <main class="main-nosotros">
       <div class="slogan">
-        <h1>I T Consultores</h1>
+        <h1>I.T.C. Consultores</h1>
         <h2>"Transformando el pago digital, conectando negocios al futuro"</h2>
       </div>
       <div class="info-nosotros">
         <p>Con más de 20 años de experiencia en el mercado financiero, nuestra empresa se ha destacado como proveedora líder de servicios para importantes entidades como American Express SA, Visa Argentina, CITIBANK, y muchas otras. Nos especializamos en la adhesión de comercios, la venta e instalación de terminales de captura, así como en la gestión de cuentas bancarias y tarjetas de crédito personales.</p>       
-        <p>CALL CENTER Nuestro Centro de Contacto proporciona servicios personalizados de recepción y emisión de llamadas a empresas líderes en el mercado financiero y bancario.
-        Cada uno de nuestros operadores está altamente capacitado y familiarizado con los productos y políticas específicas de nuestra empresa y de nuestros clientes.
-        Nos destacamos por nuestro enfoque integral, ya que nuestro equipo no solo se especializa en la atención telefónica, sino que también cuenta con conocimientos técnicos sólidos para ofrecer un soporte excepcional en nuestro sector.</p>
-        <img src="../Images/oficinas.jpg" alt="Oficina">
-        <img src="../Images/callcenter.jpg" alt="call center">
+      </div>
+      <div>
+        <a href="../pages/serviciotecnico.html" class="btn btn-light">Servicio Técnico</a>
+        <a href="../pages/solicitarpos.html" class="btn btn-light">Solicitar POS</a>
       </div>    
     </main>
-    <!--Formulario para trabajar en ITC-->
-    <section class="trabaja-nosotros">
-      <div class="trabaja-nosotros-textos">
-        <h3>Quieres trabajar con Nosotros?</h3>
-        <p>Completa el formulario y envianos tu CV</p>
-      </div>
-    <div class="icon-cv">
-      <i class="fas fa-file-import fa-4x" style="color: black;"></i>
-    </div>
-        
-      
-      
-    </section> 
-    <section class="section-form-trabaja">       
-      <form action="form.php" method="post" class="form-cv">
-        <div class="form-trabaja">
-          <label for="Nombre y Apellido"> Nombre y Apellido</label>
-          <input type="text" name="Nombre" id="Nombre" placeholder="Juan Perez">
-        </div>
-        <div class="form-trabaja">
-          <label for="Telefono">Telefono</label>    
-          <input type="Telefono" name="Telefono" id="Telefono">
-        </div>
-        <div class="form-trabaja">
-          <label for="Email">Email</label>
-          <input type="Email" name="Email" id="Email">
-        </div>
-        <div class="form-trabaja">
-          <label for="Subir Archivo">Subir Archivo</label>
-          <input type="file" name="Archivo" id="Archivo">
-        </div>
-        <div class="form-trabaja">
-          <label for="Mensaje o Consulta">Mensaje o Consulta</label>
-          <textarea name="Mensaje o Consulta" id="Mensaje o Consulta" cols="30" rows="10">
-          </textarea>
-        </div>
-        <div class="enviar-cv">
-          <input class="boton-enviar" type="submit" value="Enviar">
-        </div>       
-      </form>
-    </section>
-    <!--Footer-->
-   <footer class="text-center text-lg-start text-muted">
-    <section>
-      <div class="container text-center text-md-start mt-3">
-        <div class="row mt-3">
-        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 mt-3">
-        <div class="logo-container">
-        <img class="imagen-itc" src="../Images/logo-itc.png" alt="Logo ITC"  width="70" height="70">
-        <img class="imagen-payway" src="../Images/logo-payway-blanco.png" alt="Logo Payway" width="50%" height="50%">
-        </div>
-      </div>
-      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-        <!-- Links -->
-        <h6 class="text-uppercase fw-bold mb-4">
-          Links
-        </h6>
-        <p>
-          <a href="../index.html" class="text-reset">Home</a>
-        </p>
-        <p>
-          <a href="../pages/nosotros.html" class="text-reset">Nosotros</a>
-        </p>
-        <p>
-          <a href="../pages/solicitarpos.html" class="text-reset">Solicitar POS</a>
-        </p>
-        <p>
-          <a href="../pages/serviciotecnico.html" class="text-reset">Servicio Tecnico</a>
-        </p>
-        <p>
-          <a href="../pages/descargas.html" class="text-reset">Descargas</a>
-        </p>
-      </div>
-      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-      <!-- Contacto -->
-        <h6 class="text-uppercase fw-bold mb-4">Contacto</h6>
-        <p><i class="fas fa-user me-3"></i> I.T. Consultores</p>
-        <p><i class="fas fa-envelope me-3"></i>itc@gmail.com</p>
-        <p><i class="fas fa-home me-3"></i> Florida, Vicente Lopez</p>
-        <p><i class="fas fa-phone me-3"></i> Tel:011-4393-2711</p>
-      </div>
-    </section>
-    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-    Todos los derechos reservados @alejandrotorres75
-    </div>
     
-  </footer>
+    <!--Footer-->
+    <footer class="text-center text-lg-start text-muted">
+      <section>
+        <div class="container text-center text-md-start mt-3">
+          <div class="row mt-3">
+        <div class="col-sm-1 col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 mt-3">
+        <div class="logo-container">
+          <img class="imagen-itc" src="../Images/logo-itc.png" alt="Logo ITC"  width="100" height="100">
+          <!--<img class="imagen-payway" src="Images/logo-payway-blanco.png" alt="Logo Payway" width="50%" height="50%">-->
+        </div>
+        </div>
+        <div class="col-sm-1 col-md-2 col-lg-3 col-xl-3 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Links</h6>
+          <p><a href="../index.html" class="text-reset">Home</a></p>
+          <p><a href="../pages/nosotros.html" class="text-reset">Nosotros</a></p>
+          <p><a href="../pages/solicitarpos.html" class="text-reset">Solicitar POS</a></p>
+          <p><a href="../pages/serviciotecnico.html" class="text-reset">Servicio Tecnico</a></p>
+          <p><a href="../pages/descargas.html" class="text-reset">Descargas</a></p>
+        </div>
+        <div class="col-sm-1 col-md-2 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+        <!-- Contacto -->
+          <h6 class="text-uppercase fw-bold mb-4">Contacto</h6>
+          <p><i class="fas fa-user me-3"></i> I.T. Consultores</p>
+          <p><i class="fas fa-envelope me-3"></i>itc@gmail.com</p>
+          <p><i class="fas fa-home me-3"></i> Florida, Vicente Lopez</p>
+          <p><i class="fas fa-phone me-3"></i> Tel:011-4393-2711</p>
+        </div>
+      </section>
+      <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+      Todos los derechos reservados @alejandrotorres75
+      </div>
+    </footer> 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </div>
 </body>
