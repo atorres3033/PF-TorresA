@@ -35,43 +35,38 @@
         <h1>Servicio Técnico</h1>  
         <p>Una forma cómoda y ágil de solucionar tus inconvenientes y solicitar nuevos servicios.
         <span>Contactate con Nosotros completando el formulario.</span></p>
+        <img src="../Images/servicio-tecnico.jpg" alt="laboratorio"width="280" height="220">
       </div>
       
     </main>
-    <section class="motivo-contacto">
-      <H2>Motivo del Contacto</H2>
-        <form action="form.php" method="post">
-          <div class="form-motivo-contacto">
+    <section id="contact-tecnico">
+      <div class="container">
+        <H2 id="motivo">Motivo del Contacto</H2>
+        <form action="form">
+          <div class="form-group">
             <label for="motivo de contacto">Elija el motivo de contacto</label>
               <select name="Motivo" id="Motivo">
                 <option value="Insumos">Insumos</option>
                 <option value="Adhesion POS">Adhesión POS</option>
                 <option value="Servicio Tecnico">Servicio Técnico</option>
               </select>
-          </div> 
-          <div class="motivo-enviar">
-              <input type="submit" value="Enviar">
-          </div>              
-        </form>       
-      <h2>Formulario</h2>
-        <form action="form.php" method="post">
-          <div class="form-tecnico">
+          </div>
+          <div class="form-group">
             <label for="Nombre y Apellido"> Nombre y Apellido</label>
-            <input type="text" name="Nombre" id="Nombre" placeholder="Juan Perez">
+            <input class=form-control type="text">
           </div>
-          <div class="form-tecnico">
+          <div class="form-group">
             <label for="Email">Email</label>
-            <input type="email" name="Email" id="email">
+            <input class=form-control type="email">
           </div>
-          <div class="form-tecnico">
+          <div class="form-group">
             <label for="Mensaje o Consulta">Mensaje o Consulta</label>
-            <textarea name="Mensaje o Consulta" id="Mensaje o Consulta" cols="30" rows="10">
+            <textarea class="form-control" name="Mensaje o Consulta" id="Mensaje o Consulta" cols="30" rows="5">
             </textarea>
-          </div>  
-          <div class="tecnico-enviar">
-            <input type="submit" value="Enviar">
-          </div>            
-        </form>
+          </div>   
+          <button class="btn btn-light">Enviar</button>             
+        </form>       
+      </div> 
     </section>
   <!--Footer-->
   <footer class="text-center text-lg-start text-muted">

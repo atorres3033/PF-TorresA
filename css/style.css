@@ -7,45 +7,6 @@
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.form-tecnico, .form-motivo-contacto {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  margin: 5px auto;
-  border: none;
-}
-.form-tecnico label, .form-motivo-contacto label {
-  font-size: 12px;
-  font-weight: 900;
-  margin-top: 15px;
-}
-.form-tecnico input, .form-motivo-contacto input {
-  width: 100%;
-  height: 15px;
-  border: 1px solid black;
-  background-color: white;
-}
-.form-tecnico textarea, .form-motivo-contacto textarea {
-  width: 100%;
-  height: 70px;
-  background-color: white;
-  border: 1px solid black;
-}
-
-.tecnico-enviar, .motivo-enviar {
-  font-weight: 900;
-  width: 100%;
-  padding: 10px;
-  margin: 50px 0px 15px 0px;
-  border: none;
-  border-radius: 35px;
-  cursor: pointer;
-}
-.tecnico-enviar:hover, .motivo-enviar:hover {
-  background-color: grey;
-}
-
 .main-nosotros {
   background: url(../Images/oficina2.jpg);
   background-repeat: no-repeat;
@@ -82,10 +43,11 @@
   color: #45BCE9;
 }
 
-#contact form {
+#contact-tecnico, #contact form {
   display: block;
   width: 100%;
   padding: 0.375rem 0.7rem;
+  margin-top: 10px;
   font-size: 1rem;
   line-height: 1.5;
   color: #000;
@@ -94,10 +56,11 @@
   border: 1px solid #F2F3F6;
   border-radius: 0.25rem;
 }
-#contact form .form-group {
+#contact-tecnico .form-group, #contact form .form-group {
   margin-bottom: 1rem;
+  margin-top: 10px;
 }
-#contact form .label {
+#contact-tecnico .label, #contact form .label {
   display: inline-block;
   margin-bottom: 0.5rem;
 }
@@ -378,21 +341,26 @@ button {
 }
 
 .servicio-tecnico {
-  color: black;
+  padding: 10px 30px 20px 10px;
   display: block;
+  width: 100vw;
+  background-color: #F7F7F7;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   justify-content: center;
-  padding: 5px;
+  text-align: center;
   margin: 5px;
 }
 @media screen and (min-width: 570px) {
   .servicio-tecnico {
     text-align: center;
     margin-top: 15px;
+    padding: 20px;
   }
 }
 .servicio-tecnico h1 {
   font-size: 32px;
+  margin-top: 60px;
+  color: #1076B2;
 }
 @media screen and (min-width: 570px) {
   .servicio-tecnico h1 {
@@ -400,66 +368,73 @@ button {
   }
 }
 .servicio-tecnico p {
-  font-size: 18px;
+  font-size: 16px;
   font-style: italic;
+}
+@media screen and (min-width: 570px) {
+  .servicio-tecnico p {
+    font-size: 26px;
+  }
 }
 .servicio-tecnico span {
   display: block;
+  color: #E7296E;
   text-decoration: underline;
   margin-top: 20px;
 }
-
-.form-motivo-contacto {
-  width: 320px;
-  background-color: #6196be;
+@media screen and (min-width: 570px) {
+  .servicio-tecnico span {
+    font-size: 24px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+}
+.servicio-tecnico img {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  align-items: center;
+  margin-right: 30px;
 }
 @media screen and (min-width: 570px) {
-  .form-motivo-contacto {
-    width: 600px;
-    margin-left: 40px;
+  .servicio-tecnico img {
+    width: 400px;
+    height: 320px;
+  }
+}
+@media screen and (min-width: 995px) {
+  .servicio-tecnico img {
+    width: 550px;
+    height: 350px;
   }
 }
 
-.motivo-enviar {
-  width: 100px;
-  background-color: #6196be;
-  margin-left: 20px;
+#contact-tecnico {
+  text-align: center;
 }
 @media screen and (min-width: 570px) {
-  .motivo-enviar {
+  #contact-tecnico {
     width: 600px;
-    margin-left: 40px;
+    margin-top: 20px;
+    margin-left: 100px;
   }
 }
-
-.form-tecnico {
-  width: 320px;
-  background-color: #6196be;
-}
-@media screen and (min-width: 570px) {
-  .form-tecnico {
+@media screen and (min-width: 995px) {
+  #contact-tecnico {
     width: 600px;
-    margin-left: 40px;
+    margin-top: 20px;
+    margin-left: 300px;
   }
 }
-
-.tecnico-enviar {
-  width: 100px;
-  background-color: #6196be;
-  margin-left: 20px;
-}
-@media screen and (min-width: 570px) {
-  .tecnico-enviar {
-    width: 600px;
-    margin-left: 40px;
-  }
+#contact-tecnico #motivo {
+  font-size: 24px;
+  font-weight: 900;
 }
 
 .main-descargas .descargas {
-  margin: 10px;
+  margin: 70px 20px 20px 20px;
   padding: 20px;
   background-color: #6196be;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
   font-family: arial, helvetica, sans-serif;
@@ -519,11 +494,8 @@ button {
   display: flex;
   justify-content: center;
   margin-top: 40px;
-  gap: 40px;
-}
-
-.logo-container {
   align-items: center;
+  gap: 40px;
 }
 
 .text-uppercase {

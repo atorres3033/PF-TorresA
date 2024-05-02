@@ -235,73 +235,81 @@ button{
 //main servicio tecnico
 
 .servicio-tecnico{
+  padding: 10px 30px 20px 10px;
   @media screen and (min-width: 570px){
     text-align: center;
     margin-top: 15px;
+    padding: 20px;
   }
   @include textos-servicio-tecnico;
   h1{
     font-size: 32px;
+    margin-top: 60px;
+    color: #1076B2;
     @media screen and (min-width: 570px){
       font-size: 64px;
     }
   }
   p{
-    font-size: 18px;
+    font-size: 16px;
     font-style: italic;
+    @media screen and (min-width: 570px){
+      font-size: 26px;
+    }
   }
   span{
     display: block;
+    color: #E7296E;
     text-decoration: underline;
     margin-top: 20px;
+    @media screen and (min-width: 570px){
+      font-size: 24px;
+      margin-bottom: 30px;
+      margin-top: 30px;
+    }
+  }
+  img{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    align-items: center; 
+    margin-right: 30px;
+    @media screen and (min-width: 570px){
+      width: 400px;
+      height: 320px;
+    }
+    @media screen and (min-width: 995px){
+      width: 550px;
+      height: 350px;
+    }
   }
 }
 
  //formulario servicio tecnico
  
-.form-motivo-contacto{
-  @extend %formulario;
-  width: 320px;
-  background-color: $color-formulario-1;
+#contact-tecnico{
+  @extend %form;
+  text-align: center;
   @media screen and (min-width: 570px){
     width:600px;
-    margin-left: 40px;
+    margin-top: 20px;
+    margin-left: 100px;
   }
-}
-.motivo-enviar{
-  @extend %enviar;
-  width: 100px;
-  background-color: $color-formulario-1;
-  margin-left: 20px;
-  @media screen and (min-width: 570px){
+  @media screen and (min-width: 995px){
     width:600px;
-    margin-left: 40px;
-} 
+    margin-top: 20px;
+    margin-left: 300px;
+  }
+ #motivo{
+  font-size: 24px;
+  font-weight: 900;
+ }
 }
 
-.form-tecnico{
-  @extend %formulario;
-  width: 320px;
-  background-color: $color-formulario-1;
-  @media screen and (min-width: 570px){
-    width:600px;
-    margin-left: 40px;
-  }
-}
-.tecnico-enviar{
-  @extend %enviar;
-  width: 100px;
-  background-color: $color-formulario-1;
-  margin-left: 20px;
-  @media screen and (min-width: 570px){
-    width:600px;
-    margin-left: 40px;
-  }
-}
 
 // estilos main descargas
 
 .main-descargas .descargas{
+  
   @include main-descargas;
   h1{
     font-size: 40px;
@@ -331,17 +339,17 @@ button{
     background-color: #0056b3;
   } 
 }
+
+//estilos adicionales al footer
+
 .logo-container{
   display: flex;
   justify-content: center;
   margin-top: 40px;
+  align-items: center;
   gap: 40px;
 }
-//estilos adicionales al footer
 
-.logo-container{
-  align-items: center;
-}
 .text-uppercase{
   font-size: 16px;
   @media screen and (min-width: 767px) {
