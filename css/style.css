@@ -13,16 +13,24 @@
   background-size: cover;
   background-position: center;
   height: 100vh;
-  padding-top: 50px;
+}
+@media screen and (orientation: landscape) {
+  .main-nosotros {
+    height: 210vh;
+  }
 }
 
 .main-index {
-  background: url(../Images/banner-sitio-03.png);
+  background: url(../Images/terminal-clara.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 100vh;
-  padding-top: 50px;
+}
+@media screen and (orientation: landscape) {
+  .main-index {
+    height: 220vh;
+  }
 }
 
 .btn {
@@ -82,7 +90,6 @@ a {
 .navbar {
   z-index: 2;
   background-color: rgba(51, 47, 175, 0.9);
-  padding: 5px;
   width: 94%;
 }
 .navbar h1 {
@@ -125,13 +132,18 @@ button {
   }
 }
 
+.main-index {
+  margin-top: 50px;
+}
+
 .texto-venda h2 {
   font-family: "Roboto", sans-serif;
   font-size: 42px;
-  color: #dfe0e6;
-  margin: 35px 0px 0px 10px;
+  color: black;
+  margin: 35px 0px 0px 1px;
   text-align: center;
   font-weight: 900;
+  position: relative;
 }
 @media screen and (min-width: 570px) {
   .texto-venda h2 {
@@ -141,7 +153,7 @@ button {
 }
 @media screen and (min-width: 995px) {
   .texto-venda h2 {
-    margin-top: 20px;
+    margin-top: 70px;
     font-size: 76px;
   }
 }
@@ -149,29 +161,29 @@ button {
 .texto-venda p {
   font-family: "Roboto", sans-serif;
   font-size: 24px;
-  color: #dfe0e6;
-  margin: 15px 0px 0px 10px;
+  color: black;
+  margin: 15px 10px 0px 10px;
   text-align: center;
-  font-weight: 900;
+  font-weight: 200;
 }
 @media screen and (min-width: 570px) {
   .texto-venda p {
     margin-top: 70px;
     font-size: 46px;
+    text-align: right;
   }
 }
 @media screen and (min-width: 995px) {
   .texto-venda p {
     margin-top: 18px;
     font-size: 28px;
-    color: #dfe0e6;
+    text-align: right;
   }
 }
 
 .imagen-payway {
-  z-index: 1;
-  align-items: center;
-  margin: 30px;
+  align-items: right;
+  margin-left: 50px;
 }
 @media screen and (min-width: 570px) {
   .imagen-payway {
@@ -196,7 +208,13 @@ button {
   border-radius: 25px;
   border: 2px solid #ddd;
   box-shadow: 0 2px 4px gray;
+  cursor: pointer;
   margin: 70px 0px 0px 100px;
+}
+.boton-solicitalo .btn-solicitalo:hover {
+  background-color: #fff;
+  border: 1px solid #45bce9;
+  color: #45bce9;
 }
 @media screen and (min-width: 767px) {
   .boton-solicitalo {
@@ -207,6 +225,16 @@ button {
   .boton-solicitalo {
     margin: 70px 0px 0px 700px;
   }
+}
+
+.boton-solicitalo:hover {
+  background-color: #fff;
+  border: 1px solid #45bce9;
+  color: #45bce9;
+}
+
+.main-nosotros {
+  padding: 50px 20px 20px 20px;
 }
 
 .main-nosotros .slogan h1 {
@@ -235,7 +263,7 @@ button {
   text-align: center;
   color: black;
   font-size: 25px;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 @media screen and (min-width: 570px) {
   .slogan h2 {
@@ -253,6 +281,7 @@ button {
   font-family: arial, helvetica, sans-serif;
   color: black;
   font-size: 14px;
+  margin-top: 30px;
 }
 @media screen and (min-width: 570px) {
   .info-nosotros p {
@@ -262,8 +291,14 @@ button {
 }
 
 @media screen and (min-width: 570px) {
+  #btn-nosotros {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (min-width: 570px) {
   .btn {
-    font-size: 90px;
+    font-size: 240px;
   }
 }
 
@@ -379,7 +414,6 @@ button {
 .servicio-tecnico span {
   display: block;
   color: #E7296E;
-  text-decoration: underline;
   margin-top: 20px;
 }
 @media screen and (min-width: 570px) {
@@ -430,9 +464,14 @@ button {
   font-weight: 900;
 }
 
+@media screen and (min-width: 995px) {
+  .main-descargas {
+    margin: 70px 30px 20px 20px;
+  }
+}
+
 .main-descargas .descargas {
   margin: 70px 20px 20px 20px;
-  padding: 20px;
   background-color: #6196be;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -527,36 +566,6 @@ footer p {
     width: 110;
     height: 110;
   }
-}
-
-/* Header */
-#mainheader {
-  background: url(../Images/oficina2.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  padding-top: 50px;
-}
-
-#showcase {
-  margin-top: 30px;
-}
-
-h1 {
-  font-size: 2.5rem;
-  font-weight: bolder;
-}
-
-h2 {
-  font-size: 2rem;
-  font-weight: 300;
-}
-
-p {
-  font-size: 0.5rem;
-  margin: 10px 0;
-  line-height: 1.7em;
 }
 
 .container {

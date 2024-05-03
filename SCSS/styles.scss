@@ -25,21 +25,19 @@ body{
 a{
   text-decoration: none;
 }
+//estilos navbar
 .navbar {
     @extend %scroll;
     z-index: 2;
     background-color: $color-logo;
-    padding: 5px;
     width: 94%;
-   
-    
     h1{
       font-family:'Times New Roman', Times, serif;
       font-weight: bolder;
       color: $color-body1;
       text-decoration: none;
-      }
     }
+}
 @media screen and (min-width: 767px) {
     .nav-item{  
       font-size: 20px;
@@ -48,12 +46,10 @@ a{
 button{
   border-color: $color-body1;
   } 
-    
 .navbar-brand {
     width: 20%;
     height: 20%;
     }
-
 .collapse.navbar-collapse {
     justify-content: flex-end;
     }
@@ -62,81 +58,90 @@ button{
     }
 .navbar-nav .nav-item{
     margin: 0 5px;
-    }
+}
 .logo-navbar{
   @media screen and (min-width: 995px){
     width: 50px;
     height: 50px;
   }
-    
 }
-
 
 //estilos del main-index//
 
 .main-index{
+  margin-top: 50px;
   @extend %bg-img1;}
 .texto-venda h2{
   font-family: 'Roboto', sans-serif;
   font-size: 42px;
-  color: $color-body;
-  margin: 35px 0px 0px 10px;
+  color: $color-textos-1;
+  margin: 35px 0px 0px 1px;
   text-align: center;
   font-weight: 900;
+  position:relative;
+  
   @media screen and (min-width: 570px){
     margin-top: 70px;
     font-size: 66px;
   }
   @media screen and (min-width: 995px){
-    margin-top: 20px;
+    margin-top: 70px;
     font-size: 76px;
   }
+
 }
-  .texto-venda p{
-  font-family: 'Roboto', sans-serif;
-  font-size: 24px;
-  color: $color-body;
-  margin: 15px 0px 0px 10px;
-  text-align: center;
-  font-weight: 900;
-  @media screen and (min-width: 570px){
-    margin-top: 70px;
-    font-size: 46px;
+.texto-venda p{
+ font-family: 'Roboto', sans-serif;
+ font-size: 24px;
+ color: $color-textos-1;
+ margin: 15px 10px 0px 10px;
+ text-align: center;
+ font-weight: 200;
+ @media screen and (min-width: 570px){
+  margin-top: 70px;
+  font-size: 46px;
+  text-align: right;
   }
   @media screen and (min-width: 995px){
     margin-top: 18px;
     font-size: 28px;
-    color: $color-body;
+    text-align: right;
   }
-  }
-  .imagen-payway{
-    z-index: 1;
-    align-items: center;
-    margin: 30px;
-    @media screen and (min-width: 570px){
-      margin-left: 80px;
+ 
+}
+.imagen-payway{
+  align-items: right;
+  margin-left: 50px;
+  @media screen and (min-width: 570px){
+    margin-left: 80px;
+    }
+  @media screen and (min-width: 995px){
+    width: 45%;
+    height: 45%;
+    margin-left: 280px;
+    }
+}
+.boton-solicitalo{
+  @include btn-solicitalo;
+    margin: 70px 0px 0px 100px;
+    @media screen and (min-width: 767px){
+      font-size: 32px;
     }
     @media screen and (min-width: 995px){
-      width: 45%;
-      height: 45%;
-      margin-left: 280px;
+      margin: 70px 0px 0px 700px;
     }
-  }
-  .boton-solicitalo{
-      @include btn-solicitalo;
-      margin: 70px 0px 0px 100px;
-      @media screen and (min-width: 767px){
-        font-size: 32px;
-      }
-      @media screen and (min-width: 995px){
-        margin: 70px 0px 0px 700px;
-      }
-  }
+}
+.boton-solicitalo:hover{
+  background-color: #fff;
+  border: 1px solid #45bce9;
+  color: #45bce9;
+}
 
 //estilos del main-nosotros
 
 .main-nosotros{
   @extend %bg-img;
+  padding: 50px 20px 20px 20px;
 }
 .main-nosotros .slogan h1{
   font-family: $font-itc;
@@ -160,7 +165,7 @@ button{
     text-align: center;
     color: black;
     font-size: 25px;
-    margin-top: 10px;
+    margin-top: 30px;
     @media screen and (min-width: 570px){
       font-size: 34px;
       margin-top: 30px;
@@ -168,24 +173,31 @@ button{
     @media screen and (min-width: 995px){
       font-size: 46px;
     }
-    }
+  }
 
 .info-nosotros p{
   font-family: $font-principal;
   color: black;
   font-size: 14px;
+  margin-top: 30px;
 
   @media screen and (min-width: 570px) {
     font-size: 24px;
     margin-top: 50px;
   }
 }
+#btn-nosotros{
+  @media screen and (min-width: 570px){
+    margin-top: 100px;
+  }
+}
 .btn{
   @extend %btn;
   @media screen and (min-width: 570px){
-    font-size: 90px;
+    font-size: 240px;
   }
 }
+
 //estilos de los textos del main Solicitar POS
 
 .main-solicitarpos{
@@ -245,7 +257,7 @@ button{
   h1{
     font-size: 32px;
     margin-top: 60px;
-    color: #1076B2;
+    color: $color-textos-3;
     @media screen and (min-width: 570px){
       font-size: 64px;
     }
@@ -259,8 +271,7 @@ button{
   }
   span{
     display: block;
-    color: #E7296E;
-    text-decoration: underline;
+    color: $color-textos-4;
     margin-top: 20px;
     @media screen and (min-width: 570px){
       font-size: 24px;
@@ -307,6 +318,13 @@ button{
 
 
 // estilos main descargas
+
+ 
+.main-descargas{
+    @media screen and (min-width:995px) {
+      margin: 70px 30px 20px 20px;
+    }
+  }
 
 .main-descargas .descargas{
   
@@ -372,34 +390,8 @@ footer .imagen-itc{
   }
 }
 
-//estilos prueba
 
-/* Header */
-#mainheader {
-  background: url(../Images/oficina2.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  padding-top: 50px;
-}
-#showcase{
-  margin-top: 30px;
-}
-h1{ 
-  font-size: 2.5rem;
-  font-weight: bolder;  
-}
-h2 { 
-  font-size: 2rem; 
-  font-weight: 300;
-}
 
-p {
-  font-size: 0.5rem;
-  margin: 10px 0;
-  line-height: 1.7em;
-}
 
 
 .container {

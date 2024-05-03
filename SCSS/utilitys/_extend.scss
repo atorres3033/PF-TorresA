@@ -6,77 +6,28 @@
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-%formulario{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    margin: 5px auto;
-    border: none;
-       
-    label{
-        font-size: 12px;
-        font-weight: 900;
-        margin-top: 15px;
-        }   
-    
-    input{
-        width: 100%;
-        height: 15px;
-        border: 1px solid black;
-        background-color: white;
-    }
-    textarea{
-        width: 100%;
-        height: 70px;
-        background-color: white;
-        border: 1px solid black;
-        
-    }
-}
-
-%enviar{
-    font-weight: 900;
-    width: 100%;
-    padding: 10px;
-    margin: 50px 0px 15px 0px;
-    border: none;
-    border-radius: 35px;
-    cursor: pointer;
-    &:hover{
-        background-color: $color-acepte;    
-    }
-}
-
 %bg-img{
   background: url(../Images/oficina2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 100vh;
-  padding-top: 50px
+  @media screen and (orientation: landscape) {
+    height: 210vh;
+  }
+  
 }
 %bg-img1{
-  background: url(../Images/banner-sitio-03.png);
+  background: url(../Images/terminal-clara.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 100vh;
-  padding-top: 50px
+  @media screen and (orientation: landscape) {
+    height: 220vh;
+  }
 }
-%container-beneficios{
-    background-color: $color-formulario-1;
-    color: $color-textos-1;    
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    margin: 5px;
-    box-shadow: 1px 1px 1px $color-textos-1;
-    width: 350px;
-    @media screen and (min-width: 600px){
-        width: 800px;
-    }
-}
+
 %btn{
   display: inline-block;
   font-size: 15px;
